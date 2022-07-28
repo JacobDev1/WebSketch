@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+footer{
+    position: static;
+    padding: 15px;
+}
+
+body{
+    margin-bottom: 0px;
+    margin: 0;
+}

@@ -1,0 +1,40 @@
+<!doctype HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    
+    <title>WebSketch</title>
+    
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="about.html">About</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a class="active" href="index.html">Home</a></li>
+    </ul>
+    <div id="root">
+        <h1 id="app_title">WebSketch</h1><br>
+            <canvas id="board" oncontextmenu="return false;"></canvas>
+            <input type="color" id="color_picker" value="#363636" onChange="updateColor()">
+            <select id="brush_size" onChange="updateBrush()">
+                <option value="3" style="font-weight: 300;">Tiny</option>
+                <option value="5" style="font-weight: 400;" selected>Small</option>
+                <option value="10" style="font-weight: 600;">Medium</option>
+                <option value="15"style="font-weight: 700;">Big</option>
+                <option value="25"style="font-weight: 800;">Enormous</option>
+            </select>
+            <!-- <button id="smoothing" onClick="toggleSmoothing()" class="button_on">Smoothing</button> -->
+            <button id="eraser" type="button" onClick="toggleEraser()">Eraser</button>
+            <button type="button" onClick="clearCanvas()">Clear</button>
+            <button type="button" onClick="saveCanvas()">Save</button>
+            <input type="file" id="fileinput" accept = "image/*">  
+            <button onclick="document.getElementById('fileinput').click();">Load</button>
+    </div>
+   <footer><a href="https://github.com/JacobDev1" target="_blank">JacobDev1</a> &copy; 2022</footer>
+    <script src="js/sketch.js"></script>
+    <script src="js/shortcuts.js"></script>
+</body>
+</html>
